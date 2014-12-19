@@ -1,82 +1,36 @@
 <script type="text/javascript">
 // variables wrapped in quotes without JS prefix are for 404 page compat
 var tumblr_page = {
+	ask_enabled: {block:AskEnabled}!{/block:AskEnabled}false,
 	blog_url: {JSBlogURL},
 	description: {JSDescription},
 	meta_description: {JSMetaDescription},
-	
-	page_current: {JSCurrentPage},
-	page_next: '{NextPage}',
-	page_previous: '{PreviousPage}',
-	page_total: {JSTotalPages},
 
-	post_next: '{NextPost}',
-	post_previous: '{PreviousPost}',
+	page: {
+		is_day: {block:DayPage}!{/block:DayPage}false,
+		is_index: {block:DayPage}!{/block:DayPage}{block:PermalinkPage}!{/block:PermalinkPage}{block:SearchPage}!{/block:SearchPage}{block:TagPage}!{/block:TagPage}true,
+		is_permalink: {block:PermalinkPage}!{/block:PermalinkPage}false,
+		is_search: {block:SearchPage}!{/block:SearchPage}false,
+		is_tag: {block:TagPage}!{/block:TagPage}false,
+	},
+			
+	pagination: {
+		{block:Pagination}
+			// block:Pagination
+			current: {JSCurrentPage},
+			next: '{block:NextPage}{NextPage}{/block:NextPage}',
+			previous: '{block:PreviousPage}{PreviousPage}{/block:PreviousPage}',
+			total: {JSTotalPages}
+		{/block:Pagination}
 
-	{block:DayPage} 
-		day_page: true,
-		index_page: false,
-		permalink_page: true,
-		search_page: false,
-		tag_page: false,
-
-		page: {
-			next: {JSNextDayPage},
-			previous: {JSPreviousDayPage}
-		},
-	{/block:DayPage} 
-
-	{block:IndexPage}
-		day_page: false,
-		index_page: true,
-		permalink_page: false,
-		search_page: false,
-		tag_page: false,
-
-		page: {
-			next: '',
-			previous: ''
-		},
-	{/block:IndexPage},
-
-	{block:PermalinkPage} 
-		day_page: false,
-		index_page: false,
-		permalink_page: true,
-		search_page: false,
-		tag_page: false,
-
-		page: {
-			next: '',
-			previous: ''
-		},
-	{/block:PermalinkPage} 
-
-	{block:SearchPage}
-		day_page: false,
-		index_page: false,
-		permalink_page: false,
-		search_page: true,
-		tag_page: false,
-
-		page: {
-			next: '',
-			previous: ''
-		},
-	{/block:SearchPage}
-
-	{block:TagPage}
-		day_page: false,
-		index_page: false,
-		permalink_page: false,
-		search_page: false,
-		tag_page: true,
-
-		page: {
-			next: '',
-			previous: ''
-		},
-	{/block:TagPage}
+		{block:PermalinkPagination}
+			// block:PermalinkPagination
+			current: {JSCurrentPage},
+			next: '{block:NextPost}{NextPost}{/block:NextPost}',
+			previous: '{block:PreviousPost}{PreviousPost}{/block:PreviousPost}',
+			total: {JSTotalPages}
+		{/block:PermalinkPagination}
+	},
 
 	posts: [ {block:Posts}
 		{block:Text}
@@ -114,6 +68,8 @@ var tumblr_page = {
 
 	rss: {JSRSS},
 	search_query: {JSSearchQuery},
+	submissions_enabled: {block:SubmissionsEnabled}!{block:SubmissionsEnabled}false,
+	submit_label: {JSSubmitLabel},
 	title: {JSTitle}
 }
 </script>
