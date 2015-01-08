@@ -53,12 +53,12 @@ var tumblr_page = {
             {
                 body: {JSBody},
                 date: {
-                    day_of_month: '{DayOfMonth}',
+                    day_of_month: {DayOfMonth},
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
-                    day_of_year: '{DayOfYear}',
-                    hour_12: '{12Hour}',
-                    hour_24: '{24Hour}',
+                    day_of_year: {DayOfYear},
+                    hour_12: {12Hour},
+                    hour_24: {24Hour},
                     month: '{Month}',
                     time_age: '{TimeAgo}',
                     time_stamp: '{Timestamp}',
@@ -87,18 +87,31 @@ var tumblr_page = {
         	{
         		caption: {JSCaption},
         		date: {
-                    day_of_month: '{DayOfMonth}',
+                    day_of_month: {DayOfMonth},
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
-                    day_of_year: '{DayOfYear}',
-                    hour_12: '{12Hour}',
-                    hour_24: '{24Hour}',
+                    day_of_year: {DayOfYear},
+                    hour_12: {12Hour},
+                    hour_24: {24Hour},
                     month: '{Month}',
                     time_age: '{TimeAgo}',
                     time_stamp: '{Timestamp}',
                     year: '{Year}'
                 },
+                {block:LinkURL}link_url: {JSLinkURL},{/block:LinkURL}
+                meta: {
+                    {block:Aperture}aperture: {JSAperture},{/block:Aperture}
+                    {block:Camera}camera: {JSCamera},{/block:Camera}
+                    {block:Exposure}exposure: {JSExposure},{/block:Exposure}
+                    {block:FocalLength}focal_length: {JSFocalLength},{/block:FocalLength}
+                },
                 notes_count: {JSNoteCount},
+                photo_url:{
+                    100: {JSPhotoURL-100},
+                    250: {JSPhotoURL-250},
+                    500: {JSPhotoURL-500}
+                },
+                post_type: {JSPostType},
         	},
         {/block:Photo}
 
@@ -106,12 +119,12 @@ var tumblr_page = {
         	{
         		caption: {JSCaption},
         		date: {
-                    day_of_month: '{DayOfMonth}',
+                    day_of_month: {DayOfMonth},
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
-                    day_of_year: '{DayOfYear}',
-                    hour_12: '{12Hour}',
-                    hour_24: '{24Hour}',
+                    day_of_year: {DayOfYear},
+                    hour_12: {12Hour},
+                    hour_24: {24Hour},
                     month: '{Month}',
                     time_age: '{TimeAgo}',
                     time_stamp: '{Timestamp}',
@@ -119,6 +132,7 @@ var tumblr_page = {
                 },
         		height: {JSPhotoHeight-Panorama},
         		notes_count: {JSNoteCount},
+                post_type: {JSPostType},
         		width: {JSPhotoWidth-Panorama}
         	},
         {/block:Panorama}
@@ -127,31 +141,32 @@ var tumblr_page = {
         	{
         		count: {JSPhotoCount},
         		date: {
-                    day_of_month: '{DayOfMonth}',
+                    day_of_month: {DayOfMonth},
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
-                    day_of_year: '{DayOfYear}',
-                    hour_12: '{12Hour}',
-                    hour_24: '{24Hour}',
+                    day_of_year: {DayOfYear},
+                    hour_12: {12Hour},
+                    hour_24: {24Hour},
                     month: '{Month}',
                     time_age: '{TimeAgo}',
                     time_stamp: '{Timestamp}',
                     year: '{Year}'
                 },
                 notes_count: {JSNoteCount},
-        		photoset: {JSPhotoset}
+        		photoset: {JSPhotoset},
+                post_type: {JSPostType},
         	},
         {/block:Photoset}
 
         {block:Quote}
         	{
         		date: {
-                    day_of_month: '{DayOfMonth}',
+                    day_of_month: {DayOfMonth},
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
-                    day_of_year: '{DayOfYear}',
-                    hour_12: '{12Hour}',
-                    hour_24: '{24Hour}',
+                    day_of_year: {DayOfYear},
+                    hour_12: {12Hour},
+                    hour_24: {24Hour},
                     month: '{Month}',
                     time_age: '{TimeAgo}',
                     time_stamp: '{Timestamp}',
@@ -159,25 +174,31 @@ var tumblr_page = {
                 },
         		length: {JSLength},
         		notes_count: {JSNoteCount},
-        		quote: {JSQuote}
+                post_type: {JSPostType},
+        		quote: {JSQuote},
+                {block:Source}source: {JSSource}{/block:Source}
         	},
         {/block:Quote}
 
         {block:Link}
         	{
         		date: {
-                    day_of_month: '{DayOfMonth}',
+                    day_of_month: {DayOfMonth},
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
-                    day_of_year: '{DayOfYear}',
-                    hour_12: '{12Hour}',
-                    hour_24: '{24Hour}',
+                    day_of_year: {DayOfYear},
+                    hour_12: {12Hour},
+                    hour_24: {24Hour},
                     month: '{Month}',
                     time_age: '{TimeAgo}',
                     time_stamp: '{Timestamp}',
                     year: '{Year}'
                 },
+                {block:Description}description: {JSDescription},{/block:Description} 
                 notes_count: {JSNoteCount},
+                post_type: {JSPostType},
+                target: {JSTarget},
+                {block:Thumbnail}thumbnail: {JSThumbnail},{/block:Thumbnail} 
         		url: {JSURL}
         	},
         {/block:Link}
@@ -185,19 +206,22 @@ var tumblr_page = {
         {block:Chat}
         	{
         		date: {
-                    day_of_month: '{DayOfMonth}',
+                    day_of_month: {DayOfMonth},
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
-                    day_of_year: '{DayOfYear}',
-                    hour_12: '{12Hour}',
-                    hour_24: '{24Hour}',
+                    day_of_year: {DayOfYear},
+                    hour_12: {12Hour},
+                    hour_24: {24Hour},
                     month: '{Month}',
                     time_age: '{TimeAgo}',
                     time_stamp: '{Timestamp}',
                     year: '{Year}'
                 },
-        		line: {JSLine},
+                lines: [{block:Lines}
+        		  {JSLine},
+                {block:Lines}],
         		notes_count: {JSNoteCount},
+                post_type: {JSPostType},
         		title: {JSTitle}
         	},
         {/block:Chat}
@@ -206,19 +230,20 @@ var tumblr_page = {
         	{
         		caption: {JSCaption},
         		date: {
-                    day_of_month: '{DayOfMonth}',
+                    day_of_month: {DayOfMonth},
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
-                    day_of_year: '{DayOfYear}',
-                    hour_12: '{12Hour}',
-                    hour_24: '{24Hour}',
+                    day_of_year: {DayOfYear},
+                    hour_12: {12Hour},
+                    hour_24: {24Hour},
                     month: '{Month}',
                     time_age: '{TimeAgo}',
                     time_stamp: '{Timestamp}',
                     year: '{Year}'
                 },
                 notes_count: {JSNoteCount},
-        		play_count: {JSPlayCount}
+        		play_count: '{PlayCount}',
+                post_type: {JSPostType},
         	},
         {/block:Audio}
 
@@ -226,19 +251,20 @@ var tumblr_page = {
         	{
         		caption: {JSCaption},
         		date: {
-                    day_of_month: '{DayOfMonth}',
+                    day_of_month: {DayOfMonth},
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
-                    day_of_year: '{DayOfYear}',
-                    hour_12: '{12Hour}',
-                    hour_24: '{24Hour}',
+                    day_of_year: {DayOfYear},
+                    hour_12: {12Hour},
+                    hour_24: {24Hour},
                     month: '{Month}',
                     time_age: '{TimeAgo}',
                     time_stamp: '{Timestamp}',
                     year: '{Year}'
                 },
                 notes_count: {JSNoteCount},
-        		play_count: {JSPlayCount}
+        		play_count: '{PlayCount}',
+                post_type: {JSPostType},
         	},
         {/block:Video}
 
@@ -255,18 +281,19 @@ var tumblr_page = {
         			128: {JSAnswererPortraitURL-128}
         		},
         		date: {
-                    day_of_month: '{DayOfMonth}',
+                    day_of_month: {DayOfMonth},
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
-                    day_of_year: '{DayOfYear}',
-                    hour_12: '{12Hour}',
-                    hour_24: '{24Hour}',
+                    day_of_year: {DayOfYear},
+                    hour_12: {12Hour},
+                    hour_24: {24Hour},
                     month: '{Month}',
                     time_age: '{TimeAgo}',
                     time_stamp: '{Timestamp}',
                     year: '{Year}'
                 },
                 notes_count: {JSNoteCount},
+                post_type: {JSPostType},
         		question: {JSQuestion}
         	},
         {/block:Answer}
