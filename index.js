@@ -53,7 +53,7 @@ var tumblr_page = {
             {
                 body: {JSBody},
                 date: {
-                    day_of_month: {DayOfMonth},
+                    day_of_month: '{DayOfMonth}',
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
                     day_of_year: {DayOfYear},
@@ -87,7 +87,7 @@ var tumblr_page = {
         	{
         		caption: {JSCaption},
         		date: {
-                    day_of_month: {DayOfMonth},
+                    day_of_month: '{DayOfMonth}',
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
                     day_of_year: {DayOfYear},
@@ -119,7 +119,7 @@ var tumblr_page = {
         	{
         		caption: {JSCaption},
         		date: {
-                    day_of_month: {DayOfMonth},
+                    day_of_month: '{DayOfMonth}',
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
                     day_of_year: {DayOfYear},
@@ -141,7 +141,7 @@ var tumblr_page = {
         	{
         		count: {JSPhotoCount},
         		date: {
-                    day_of_month: {DayOfMonth},
+                    day_of_month: '{DayOfMonth}',
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
                     day_of_year: {DayOfYear},
@@ -161,7 +161,7 @@ var tumblr_page = {
         {block:Quote}
         	{
         		date: {
-                    day_of_month: {DayOfMonth},
+                    day_of_month: '{DayOfMonth}',
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
                     day_of_year: {DayOfYear},
@@ -183,7 +183,7 @@ var tumblr_page = {
         {block:Link}
         	{
         		date: {
-                    day_of_month: {DayOfMonth},
+                    day_of_month: '{DayOfMonth}',
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
                     day_of_year: {DayOfYear},
@@ -206,7 +206,7 @@ var tumblr_page = {
         {block:Chat}
         	{
         		date: {
-                    day_of_month: {DayOfMonth},
+                    day_of_month: '{DayOfMonth}',
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
                     day_of_year: {DayOfYear},
@@ -230,7 +230,7 @@ var tumblr_page = {
         	{
         		caption: {JSCaption},
         		date: {
-                    day_of_month: {DayOfMonth},
+                    day_of_month: '{DayOfMonth}',
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
                     day_of_year: {DayOfYear},
@@ -251,7 +251,7 @@ var tumblr_page = {
         	{
         		caption: {JSCaption},
         		date: {
-                    day_of_month: {DayOfMonth},
+                    day_of_month: '{DayOfMonth}',
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
                     day_of_year: {DayOfYear},
@@ -281,7 +281,7 @@ var tumblr_page = {
         			128: {JSAnswererPortraitURL-128}
         		},
         		date: {
-                    day_of_month: {DayOfMonth},
+                    day_of_month: '{DayOfMonth}',
                     day_of_week: '{DayOfWeek}',
                     day_of_week_short: '{ShortDayOfWeek}',
                     day_of_year: {DayOfYear},
